@@ -1,0 +1,12 @@
+{
+  "connectionString": "Server=tcp:somewhereclose.database.windows.net,1433;Initial Catalog=HousingData;Persist Security Info=False;User ID=veronicapichay@outlook.com@somewhereclose;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+
+  "blobConnectionString": "DefaultEndpointsProtocol=https;AccountName=bahaystorage;AccountKey=2THvGYs9qyYDYWL/gR1wPiHJY9mi6XGVFxrfxS7IxCEr0+RryIHn/lwM5NqLG6ht+XTS3e5LyyDX+AStVId9/Q==;EndpointSuffix=core.windows.net"
+
+
+
+}
+
+
+
+
