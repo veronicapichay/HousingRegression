@@ -2,18 +2,20 @@
 {
     public class HouseData
     {
-        public string Price;
-        public string Area;
-        public string Bedrooms;
-        public string Bathrooms;
-        public string Stories;
+        public int Price;
+        public int Area;
+        public int Bedrooms;
+        public int Bathrooms;
+        public int Stories;
         public string Mainroad;
         public string Guestroom;
         public string Basement;
         public string Hotwaterheating;
         public string Airconditioning;
-        public string Parking;
+        public int Parking;
         public string Prefarea;
         public string Furnishingstatus;
+
     }
 }
+
