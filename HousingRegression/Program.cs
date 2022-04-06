@@ -51,7 +51,6 @@ namespace HousingRegression
             using (var connection = new SqlConnection(_sqlConnectionString)) //passing configuration _sql
             {
 
-
                 connection.Open();
                 //query to insert to the db, create a table in azure db and add a primary key
                 var insertCommand = @"INSERT INTO dbo.HomeData VALUES           
@@ -93,8 +92,7 @@ namespace HousingRegression
 
                 }
 
-
-                ////reading from queried the data that will be used for the model 
+                //reading from queried the data that will be used for the model 
 
                 var data = new List<HouseData>(); //all the data that we pulled from the db
 
@@ -137,32 +135,22 @@ namespace HousingRegression
                              .Append(context.Regression.Trainers.FastTree(labelColumnName: "Prefarea")); //Fastree is the trainer that being used. Training Prefarea column
 
                 //setting up pipeline
-                var model = pipeline.Fit(testTrainSplit.TrainSet);                  //using fit method passing dataset
+                var model = pipeline.Fit(testTrainSplit.TrainSet);                                                           //using fit method passing dataset
 
                 //saving to blob storage //create a container inside your blob storage
-                var storageAccount = CloudStorageAccount.Parse(configuration["blobConnectionString"]);                //connect to blob storage account
+                var storageAccount = CloudStorageAccount.Parse(configuration["blobConnectionString"]);                    //connect to blob storage account using Microsoft.WindowsAzure.Storage;
                 var client = storageAccount.CreateCloudBlobClient();
-                var container = client.GetContainerReference("models");                         //referencing to the new container
+                var container = client.GetContainerReference("models");                                                   //referencing to the new container
 
-                var blob = container.GetBlockBlobReference(fileName);               //model file
+                var blob = container.GetBlockBlobReference(fileName);                                                   //model file
 
                 using (var stream = File.Create(fileName))
                 {
                     context.Model.Save(model, stream);  //saves model on local disk
-
-
-
-
-
                 }
 
-                await blob.UploadFromFileAsync(fileName);           //
-
-
+                await blob.UploadFromFileAsync(fileName);           
             }
-
-
-
         }
         private static int Parse(string value)
         {
