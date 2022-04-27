@@ -1,7 +1,7 @@
 {
-  "connectionString": "Server=tcp:dunsamalapit.database.windows.net,1433;Initial Catalog=bahaydata;Persist Security Info=False;User ID=ulapadmin;Password=!XMNBJpNRY22D78;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+  "connectionString": "",
 
-  "blobConnectionString": "DefaultEndpointsProtocol=https;AccountName=bahaylalagyan;AccountKey=ZewWlX3nbjFsSdUeqhji88frKxufhZITyNu50q3QzjITDYTeKQlq1NfWQLXXy5CHR2zTSX7Aq4ol+AStv/bvDw==;EndpointSuffix=core.windows.net"
+  "blobConnectionString": ""
 
 
 
